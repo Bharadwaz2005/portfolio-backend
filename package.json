@@ -4,7 +4,7 @@
   "description": "Portfolio website for Bharadhwaj K",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "NODE_ENV=production npm install --omit=dev && node server/server.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {
