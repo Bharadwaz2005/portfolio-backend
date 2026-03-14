@@ -4,8 +4,8 @@
   "description": "Portfolio website for Bharadhwaj K",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production npm install --omit=dev && node server/server.js",
-    "dev": "nodemon server.js"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -16,7 +16,6 @@
     "helmet": "^7.2.0",
     "mysql2": "^3.19.1",
     "nodemailer": "^8.0.2",
-    "production": "^0.0.2",
     "validator": "^13.11.0"
   },
   "devDependencies": {
