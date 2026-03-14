@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Bharadhwaj K - Full Stack Developer & CSE Student Portfolio"/>
+  <meta name="keywords" content="Bharadhwaj, Full Stack Developer, Portfolio, Web Development, CSE"/>
+  <title>Bharadhwaj K — Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { gold: '#f59e0b' } } },
+      corePlugins: { preflight: false }
+    };
+  </script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="page-fade">
+
+<!-- Loader -->
+<div id="page-loader" class="page-loader">
+  <div class="loader-ring"></div>
+</div>
+
+<!-- BG Effects -->
+<div class="bg-overlay"></div>
+<div class="bg-grain"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="main-navbar" class="navbar">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="nav-brand">BK</a>
+
+      <!-- Desktop Nav -->
+      <div class="desktop-nav d-flex align-items-center gap-4">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#resume" class="btn-primary py-2 px-4" style="font-size:0.8rem;">
+          <i class="fas fa-download me-1"></i> Resume
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger-btn" class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav" class="mobile-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="projects.html" class="nav-link">Projects</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="#resume" class="btn-primary mt-3">
+    <i class="fas fa-download me-1"></i> Download Resume
+  </a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero-section">
+  <div class="hero-bg-image"></div>
+  <div class="hero-bg-gradient"></div>
+
+  <div class="container hero-content py-5 mt-5 mt-lg-0">
+<div class="row align-items-center gy-5">
+
+  <!-- Empty left spacer — background image handles the left side -->
+  <div class="col-lg-5 order-1 d-none d-lg-block">
+  </div>
+
+  <!-- Text RIGHT -->
+  <div class="col-lg-7 order-2">
+        <div class="hero-tag reveal">
+          <span class="hero-tag-dot"></span>
+          Available for Opportunities
+        </div>
+        <h1 class="hero-name reveal reveal-delay-1">Bharadhwaj K</h1>
+        <p class="hero-role reveal reveal-delay-2">
+          <span id="typewriter"></span><span style="color:var(--primary);animation:pulse-dot 1s infinite;display:inline-block;">|</span>
+        </p>
+        <p class="hero-bio reveal reveal-delay-3">
+          B.Tech CSE student at SRIT with CGPA 8.5. I craft clean, efficient web applications and enjoy solving real-world problems through code.
+        </p>
+        <div class="hero-cta-group reveal reveal-delay-4">
+          <a href="projects.html" class="btn-primary">
+            <i class="fas fa-code me-1"></i> View Projects
+          </a>
+          <a href="contact.html" class="btn-outline">
+            <i class="fas fa-envelope me-1"></i> Get In Touch
+          </a>
+        </div>
+
+        <!-- Quick Social -->
+        <div class="d-flex gap-3 mt-4 reveal reveal-delay-4">
+          <a href="https://github.com/Bharadwaz2005" target="_blank" rel="noopener" class="social-icon" style="width:38px;height:38px;background:rgba(245,158,11,0.1);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.color='var(--primary)';this.style.borderColor='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)';this.style.borderColor='var(--border)'">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bharadhwaj-k-661212335" target="_blank" rel="noopener" class="social-icon" style="width:38px;height:38px;background:rgba(245,158,11,0.1);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.color='var(--primary)';this.style.borderColor='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)';this.style.borderColor='var(--border)'">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/__mr_rexx_/?hl=en" target="_blank" rel="noopener" class="social-icon" style="width:38px;height:38px;background:rgba(245,158,11,0.1);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.color='var(--primary)';this.style.borderColor='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)';this.style.borderColor='var(--border)'">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;text-align:center;opacity:0.5;">
+    <div style="width:1px;height:40px;background:linear-gradient(to bottom,transparent,var(--primary));margin:0 auto 0.4rem;"></div>
+    <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.15em;color:var(--text-muted);text-transform:uppercase;">scroll</span>
+  </div>
+</section>
+
+<!-- ===== ABOUT / SKILLS ===== -->
+<section class="py-5 my-4" id="about">
+  <div class="container">
+    <!-- Stats Row -->
+    <div class="glass-card mb-5 reveal">
+      <div class="row g-0">
+        <div class="col-6 col-md-3 stat-item">
+          <div class="stat-number">8.5</div>
+          <div class="stat-label">CGPA</div>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-5 align-items-start">
+      <!-- About Text -->
+      <div class="col-lg-6">
+        <p class="section-label reveal">About Me</p>
+        <h2 class="section-title reveal reveal-delay-1">Building Things<br/>That Matter</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+        <p class="reveal reveal-delay-2" style="color:var(--text-secondary);line-height:1.9;margin-bottom:1.25rem;">
+          I'm a B.Tech Computer Science and Engineering student at <span style="color:var(--primary)">Srinivasa Ramanujan Institute of Technology</span>, driven by a passion for building web applications that are both functional and elegant.
+        </p>
+        <p class="reveal reveal-delay-3" style="color:var(--text-secondary);line-height:1.9;margin-bottom:1.75rem;">
+          As a Full Stack Developer, I enjoy working across the entire stack — from crafting clean front-end interfaces to designing robust back-end APIs. I'm a consistent learner who believes in practical, hands-on development.
+        </p>
+
+        <!-- Hobbies -->
+        <div class="reveal reveal-delay-3">
+          <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">When I'm not coding</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-tag"><i class="fas fa-music fa-xs"></i> Music</span>
+            <span class="skill-tag"><i class="fas fa-video fa-xs"></i> Video Editing</span>
+            <span class="skill-tag"><i class="fas fa-dumbbell fa-xs"></i> Fitness</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="col-lg-6">
+        <p class="section-label reveal">Technical Skills</p>
+        <h2 class="section-title reveal reveal-delay-1">My Toolkit</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <!-- Skill Bars -->
+        <div class="reveal reveal-delay-2">
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Python</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>React.js</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Java</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>MySQL</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="78%"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Postgres DB</span><span>72%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="72%"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>JavaScript / Node.js</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div>
+          </div>
+        </div>
+
+        <!-- Tech Tags -->
+        <div class="d-flex flex-wrap gap-2 mt-4 reveal reveal-delay-3">
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">REST APIs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section>
+<section class="py-5 my-2" id="education">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label reveal">Education</p>
+      <h2 class="section-title reveal reveal-delay-1">Academic Journey</h2>
+      <div class="section-divider reveal reveal-delay-2" style="margin:1.5rem auto;"></div>
+    </div>
+    <div class="row justify-content-center align-items-center gy-4">
+
+      <!-- Education Card -->
+      <div class="col-lg-7 col-md-8">
+        <div class="glass-card p-4 mb-3 reveal">
+          <div class="d-flex align-items-start gap-3">
+            <div style="width:44px;height:44px;background:rgba(245,158,11,0.1);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fas fa-graduation-cap" style="color:var(--primary);"></i>
+            </div>
+            <div>
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <h5 style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin:0;">B.Tech — Computer Science & Engineering</h5>
+                <span style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(245,158,11,0.1);color:var(--primary);padding:0.2rem 0.7rem;border-radius:100px;border:1px solid var(--border);">2024 – 2028</span>
+              </div>
+              <p style="color:var(--primary);font-size:0.875rem;margin:0.25rem 0;">Srinivasa Ramanujan Institute of Technology</p>
+              <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">CGPA: <span style="color:var(--primary);font-weight:600;">8.5 / 10</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Circle Profile Image -->
+      <div class="col-lg-3 col-md-4 d-flex justify-content-center reveal reveal-delay-2">
+        <img src="images/profile1.png" alt="Bharadhwaj K"
+          style="width:200px;height:200px;object-fit:cover;border-radius:50%;border:3px solid var(--primary);box-shadow:0 0 30px rgba(245,158,11,0.3);"/>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESUME SECTION ===== -->
+<section class="py-5 my-2" id="resume">
+  <div class="container">
+    <div class="glass-card p-5 reveal" style="background:linear-gradient(135deg,rgba(245,158,11,0.06),rgba(15,15,25,0.9));">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8">
+          <p class="section-label mb-2">Resume</p>
+          <h2 class="section-title mb-3">See My Full Experience</h2>
+          <p style="color:var(--text-secondary);line-height:1.8;max-width:500px;">Download my resume to get a complete overview of my skills, education, projects, and everything I bring to the table.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="resume.pdf" download="Bharadhwaj_K_Resume.pdf" class="btn-primary">
+            <i class="fas fa-file-pdf me-2"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ENDING BANNER ===== -->
+<section class="ending-section reveal">
+  <div class="ending-bg"></div>
+  <div class="ending-overlay"></div>
+  <div class="container text-center" style="position:relative;z-index:2;">
+    <p class="section-label mb-3">Let's Collaborate</p>
+    <h2 class="section-title mb-4" style="font-size:clamp(2rem,5vw,3.5rem);">Have a Project in Mind?</h2>
+    <p style="color:var(--text-secondary);max-width:480px;margin:0 auto 2.5rem;line-height:1.8;">I'm always open to new opportunities and interesting challenges. Let's build something great together.</p>
+    <a href="contact.html" class="btn-primary">
+      <i class="fas fa-paper-plane me-2"></i> Start a Conversation
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      <div class="col-md-4">
+        <span class="nav-brand">BK</span>
+      </div>
+      <div class="col-md-4 text-md-center">
+        <p style="color:var(--text-muted);font-size:0.8rem;font-family:var(--font-mono);margin:0;">
+          &copy; 2025 Bharadhwaj K. All rights reserved.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end d-flex gap-3 justify-content-md-end">
+        <a href="https://github.com/Bharadwaz2005" target="_blank" style="color:var(--text-muted);font-size:1.1rem;transition:color 0.2s;" onmouseenter="this.style.color='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)'"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bharadhwaj-k-661212335" target="_blank" style="color:var(--text-muted);font-size:1.1rem;transition:color 0.2s;" onmouseenter="this.style.color='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)'"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/__mr_rexx_/?hl=en" target="_blank" style="color:var(--text-muted);font-size:1.1rem;transition:color 0.2s;" onmouseenter="this.style.color='var(--primary)'" onmouseleave="this.style.color='var(--text-muted)'"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
