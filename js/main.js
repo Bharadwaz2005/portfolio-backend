@@ -94,7 +94,7 @@ function showToast(message, isSuccess = true) {
   setTimeout(() => toast.classList.remove('show'), 3500);
 }
 
-// ===== CONTACT FORM — NETLIFY =====
+// ===== CONTACT FORM — RAILWAY BACKEND =====
 (function initContactForm() {
   const form = $('#contact-form');
   if (!form) return;
@@ -113,23 +113,19 @@ function showToast(message, isSuccess = true) {
     };
 
     try {
-      const formData = new FormData();
-      formData.append('form-name', 'contact');
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('subject', data.subject);
-      formData.append('message', data.message);
-
-      const res = await fetch('/', {
+      const res = await fetch('https://portfolio-backend-production-fc70.up.railway.app/api/contact', {
         method: 'POST',
-        body: formData
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       });
 
-      if (res.ok) {
+      const result = await res.json();
+
+      if (result.success) {
         showToast('Message sent successfully! I\'ll get back to you soon.', true);
         form.reset();
       } else {
-        showToast('Failed to send. Please try again.', false);
+        showToast(result.message || 'Failed to send. Please try again.', false);
       }
     } catch (err) {
       showToast('Connection error. Please try again.', false);
