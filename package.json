@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Portfolio website for Bharadhwaj K",
   "main": "server.js",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"
@@ -19,6 +22,6 @@
     "validator": "^13.11.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.1.14"
   }
 }
