@@ -50,14 +50,14 @@ app.use(generalLimiter);
 
 // ===== MYSQL CONNECTION POOL =====
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASS || 'pass123',
-  database: process.env.DB_NAME || 'userDetails',
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false
+  queueLimit: 0
 });
 
 // ===== DB INIT (create tables if not exist) =====
@@ -164,7 +164,7 @@ app.use((err, req, res, next) => {
 (async () => {
   await initDB();
   app.listen(PORT, () => {
-    console.log(`\n🚀 Portfolio server running on http://localhost:${PORT}`);
+    console.log(`🚀 Portfolio server running on port ${PORT}`);
     console.log(`📂 Serving static files from: ${path.join(__dirname, '..')}`);
     console.log(`🔒 Environment: ${process.env.NODE_ENV || 'development'}\n`);
   });
